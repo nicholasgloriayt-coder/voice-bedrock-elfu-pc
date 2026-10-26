@@ -1,0 +1,22 @@
+{
+  "name": "voice-bedrock-elfu-windows",
+  "version": "1.0.0",
+  "description": "Chat de voz por proximidade para Minecraft Bedrock",
+  "author": "Elfu",
+  "main": "electron/main.js",
+  "scripts": {
+    "windows:dev": "electron .",
+    "windows:build": "electron-builder --win nsis --publish never"
+  },
+  "build": {
+    "appId": "com.elfu.voicebedrock",
+    "productName": "Voice Bedrock Elfu",
+    "artifactName": "Voice-Bedrock-Elfu-Setup.${ext}",
+    "files": ["electron/**", "www/**"],
+    "win": { "target": "nsis", "icon": "build/icon.ico" }
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.0.0"
+  }
+}
